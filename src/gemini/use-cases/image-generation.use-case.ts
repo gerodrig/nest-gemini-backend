@@ -10,14 +10,17 @@ import {
 
 import { v4 as uuidV4 } from 'uuid';
 import { ImageGenerationDto } from '../dtos/image-generation.dto';
-import { geminiUploadFiles } from '../helpers/gemini-upload-file';
+import { geminiUploadFiles } from '../helpers/gemini-upload-file.helper';
 
+// TODO: Use a cloud storage service to store the generated images.
 const AI_IMAGES_PATH = path.join(
   __dirname,
   '..',
   '..',
   'public/ai-images', // Adjust the path as necessary
 );
+
+// TODO: Make the model name and system instructions configurable.
 interface Options {
   model?: string;
   systemInstructions?: string;

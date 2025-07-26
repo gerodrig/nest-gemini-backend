@@ -1,6 +1,7 @@
 import { GoogleGenAI } from '@google/genai';
 import { BasicPromptDto } from '../dtos/basic-prompt.dto';
 
+// TODO: Make the model name and system instructions configurable.
 interface Options {
   model?: string;
   systemInstruction?: string;

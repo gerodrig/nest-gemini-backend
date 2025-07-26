@@ -4,8 +4,9 @@ import {
   GoogleGenAI,
 } from '@google/genai';
 import { BasicPromptDto } from '../dtos/basic-prompt.dto';
-import { geminiUploadFiles } from '../helpers/gemini-upload-file';
+import { geminiUploadFiles } from '../helpers/gemini-upload-file.helper';
 
+// TODO: Make the model name and system instructions configurable.
 interface Options {
   model?: string;
   systemInstruction?: string;

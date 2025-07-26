@@ -1,7 +1,8 @@
 import { Content, createPartFromUri, GoogleGenAI } from '@google/genai';
 import { ChatPromptDto } from '../dtos/chat.prompt.dto';
-import { geminiUploadFiles } from '../helpers/gemini-upload-file';
+import { geminiUploadFiles } from '../helpers/gemini-upload-file.helper';
 
+// TODO: Make the model name and system instructions configurable.
 interface Options {
   model?: string;
   systemInstructions?: string;

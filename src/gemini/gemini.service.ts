@@ -11,8 +11,10 @@ import { chatPromptStreamUseCase } from './use-cases/chat-prompt.use-case';
 
 @Injectable()
 export class GeminiService {
+  // TODO: Store the API key in a secure way, for example, using a configuration service or environment variables.
   private ai = new GoogleGenAI({ apiKey: process.env.GEMINI_GENAI_API_KEY });
 
+  // TODO: Use a persistent storage solution like a database instead of in-memory storage.
   private chatHistory = new Map<string, Content[]>();
 
   async basicPrompt(basicPromptDto: BasicPromptDto) {
