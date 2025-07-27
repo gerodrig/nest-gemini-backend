@@ -39,6 +39,7 @@ export class GeminiService {
   }
 
   getChatHistory(chatId: string) {
+    //? The structuredClone is used to ensure that the returned chat history is a deep copy,
     return structuredClone(this.chatHistory.get(chatId) ?? []);
   }
 

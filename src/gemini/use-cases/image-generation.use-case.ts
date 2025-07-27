@@ -17,6 +17,7 @@ const AI_IMAGES_PATH = path.join(
   __dirname,
   '..',
   '..',
+  '..',
   'public/ai-images', // Adjust the path as necessary
 );
 

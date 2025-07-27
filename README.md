@@ -1,98 +1,146 @@
 <p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
+  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
 </p>
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
-
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg" alt="Donate us"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow" alt="Follow us on Twitter"></a>
+<p align="center">
+  <a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
+  <a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
 </p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
-## Description
+# Gemini API Backend
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+This project is a powerful backend built with NestJS that provides a robust interface to the Google Gemini API. It allows you to easily integrate advanced AI capabilities into your applications, including basic and chat-based prompts, streaming responses, and image generation.
 
-## Project setup
+## ✨ Features
 
-```bash
-$ pnpm install
-```
+- **Basic Prompt:** Send a simple text prompt to the Gemini model and get a direct response.
+- **Streaming Prompts:** Handle real-time data streams for dynamic and interactive experiences.
+- **Chat Functionality:** Maintain conversational context with chat history support.
+- **Image Generation:** Create images from text descriptions using the latest AI models.
+- **File Uploads:** Support for multimodal inputs, allowing you to include files in your prompts.
+- **Scalable Architecture:** Built with NestJS, ensuring a modular and maintainable codebase.
 
-## Compile and run the project
+## 🚀 Getting Started
 
-```bash
-# development
-$ pnpm run start
+Follow these steps to get the project up and running on your local machine.
 
-# watch mode
-$ pnpm run start:dev
+### Prerequisites
 
-# production mode
-$ pnpm run start:prod
-```
+- [Node.js](https://nodejs.org/en/) (v18 or higher)
+- [pnpm](https://pnpm.io/installation)
+- A [Google Gemini API Key](https://aistudio.google.com/apikey)
 
-## Run tests
+### Installation
 
-```bash
-# unit tests
-$ pnpm run test
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/your-username/gemini-backend.git
+   cd gemini-backend
+   ```
 
-# e2e tests
-$ pnpm run test:e2e
+2. **Install dependencies:**
+   ```bash
+   pnpm install
+   ```
 
-# test coverage
-$ pnpm run test:cov
-```
+### Configuration
 
-## Deployment
+1. **Create a `.env` file** from the template:
+   ```bash
+   cp .env.template .env
+   ```
 
-When you're ready to deploy your NestJS application to production, there are some key steps you can take to ensure it runs as efficiently as possible. Check out the [deployment documentation](https://docs.nestjs.com/deployment) for more information.
+2. **Add your Gemini API key** to the `.env` file:
+   ```env
+   GEMINI_API_KEY="YOUR_API_KEY"
+   API_URL="http://localhost:3000"
+   ```
 
-If you are looking for a cloud-based platform to deploy your NestJS application, check out [Mau](https://mau.nestjs.com), our official platform for deploying NestJS applications on AWS. Mau makes deployment straightforward and fast, requiring just a few simple steps:
+### Running the Application
 
-```bash
-$ pnpm install -g mau
-$ mau deploy
-```
+- **Development Mode:**
+  ```bash
+  pnpm run start:dev
+  ```
 
-With Mau, you can deploy your application in just a few clicks, allowing you to focus on building features rather than managing infrastructure.
+- **Production Mode:**
+  ```bash
+  pnpm run build
+  pnpm run start:prod
+  ```
 
-## Resources
+The application will be available at `http://localhost:3000`.
 
-Check out a few resources that may come in handy when working with NestJS:
+## 🛠️ API Endpoints
 
-- Visit the [NestJS Documentation](https://docs.nestjs.com) to learn more about the framework.
-- For questions and support, please visit our [Discord channel](https://discord.gg/G7Qnnhy).
-- To dive deeper and get more hands-on experience, check out our official video [courses](https://courses.nestjs.com/).
-- Deploy your application to AWS with the help of [NestJS Mau](https://mau.nestjs.com) in just a few clicks.
-- Visualize your application graph and interact with the NestJS application in real-time using [NestJS Devtools](https://devtools.nestjs.com).
-- Need help with your project (part-time to full-time)? Check out our official [enterprise support](https://enterprise.nestjs.com).
-- To stay in the loop and get updates, follow us on [X](https://x.com/nestframework) and [LinkedIn](https://linkedin.com/company/nestjs).
-- Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
+Here are the available endpoints to interact with the Gemini API.
 
-## Support
+---
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+### **Basic Prompt**
 
-## Stay in touch
+Send a single prompt and receive a complete response.
 
-- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+- **Endpoint:** `POST /gemini/basic-prompt`
+- **Body:**
+  ```json
+  {
+    "prompt": "Explain the theory of relativity in simple terms."
+  }
+  ```
 
-## License
+---
 
-Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
+### **Basic Prompt (Streaming)**
+
+Send a prompt and receive a response as a stream of data.
+
+- **Endpoint:** `POST /gemini/basic-prompt-stream`
+- **Body:** `multipart/form-data`
+  - `prompt` (string): The text prompt.
+  - `files` (file array, optional): Images or other files to include.
+
+---
+
+### **Chat (Streaming)**
+
+Engage in a conversation with streaming responses.
+
+- **Endpoint:** `POST /gemini/chat-stream`
+- **Body:** `multipart/form-data`
+  - `chatId` (string): A unique identifier for the chat session.
+  - `prompt` (string): The user's message.
+  - `files` (file array, optional): Files to include in the message.
+
+---
+
+### **Get Chat History**
+
+Retrieve the message history for a specific chat session.
+
+- **Endpoint:** `GET /gemini/chat-history/:chatId`
+- **Example:** `GET /gemini/chat-history/123e4567-e89b-12d3-a456-426614174000`
+
+---
+
+### **Image Generation**
+
+Generate an image based on a text prompt.
+
+- **Endpoint:** `POST /gemini/image-generation`
+- **Body:** `multipart/form-data`
+  - `prompt` (string): A description of the image to generate.
+  - `files` (file array, optional): Reference images.
+
+## 💻 Technologies Used
+
+- **[NestJS](https://nestjs.com/):** A progressive Node.js framework for building efficient, reliable, and scalable server-side applications.
+- **[Google Gemini API](https://ai.google.dev/):** The powerful AI model behind the application's features.
+- **[TypeScript](https://www.typescriptlang.org/):** A typed superset of JavaScript that compiles to plain JavaScript.
+- **[pnpm](https://pnpm.io/):** A fast, disk space-efficient package manager.
+
+## 📄 License
+
+This project is licensed under the UNLICENSED License. See the `LICENSE` file for more details.
+
+---
