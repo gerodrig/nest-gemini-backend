@@ -55,3 +55,8 @@ pids
 # Diagnostic reports (https://nodejs.org/api/report.html)
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
 
+# Dont include generated images
+public/ai-images/*.png
+public/ai-images/*.jpg
+public/ai-images/*.jpeg
+public/ai-images/*.gif
