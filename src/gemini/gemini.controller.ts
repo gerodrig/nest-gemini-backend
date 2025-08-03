@@ -25,6 +25,7 @@ export class GeminiController {
 
   @Post('basic-prompt')
   basicPrompt(@Body() basicPromptDto: BasicPromptDto) {
+    console.log('Basic Prompt:', basicPromptDto);
     return this.geminiService.basicPrompt(basicPromptDto);
   }
   @Post('basic-prompt-stream')
